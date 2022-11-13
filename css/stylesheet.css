@@ -17,7 +17,8 @@ header {
     border-bottom: 2px solid var(--foreground);
     margin-bottom: 20px;
 }
-h1, h2, h3 {
+
+.heading-style, .footer-style {
     text-align: center;
     color: var(--foreground);
 }
@@ -68,4 +69,15 @@ h1, h2, h3 {
     display: flex;
     justify-content: right;
     gap: 10px;
+}
+
+/* My notes styling */
+.my-notes {
+    color: var(--foreground);
+    list-style: square;
+}
+
+/* Footer Styling */
+.footer-icon {
+    mix-blend-mode: multiply;
 }
