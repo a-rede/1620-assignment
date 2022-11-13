@@ -1,4 +1,24 @@
 :root {
-    --background: #F9F3EC;
+    --sidebar-background: #F9F3EC;
     --foreground: #334D4D;
+    --background: #F3E3D8;
 }
+
+body {
+    background-color: var(--background);
+    font-family: Raleway;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--foreground);
+}
+
+.navbar-default {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+
