@@ -3,6 +3,8 @@
     --foreground: #334D4D;
     --background: #F3E3D8;
     --border-color: #5394A0;
+    --dark-btn-color: #2D3034;
+    --save-btn-color: #8C1212;
 }
 
 body {
@@ -11,6 +13,10 @@ body {
 }
 
 /* Header styling */
+header {
+    border-bottom: 2px solid var(--foreground);
+    margin-bottom: 20px;
+}
 h1, h2, h3 {
     text-align: center;
     color: var(--foreground);
@@ -28,5 +34,38 @@ h1, h2, h3 {
     width: 98%;
     background-color: var(--sidebar-background);
     border: 3px solid var(--border-color);
-    border-radius: 3px; 
+    border-radius: 3px;
+    display: flex;
+    margin: 25px 0 25px;
+}
+
+/* Button styling */
+.btn-color {
+    background-color: var(--foreground);
+}
+
+.dark-btn {
+    background-color: var(--dark-btn-color);
+}
+
+.cancel-btn {
+    background-color: var(--save-btn-color);
+}
+
+.btn-style {
+    color: white;
+    border: 0px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.top-btn {
+    display: flex;
+    justify-content:space-between;
+}
+
+.bot-btn {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
 }
