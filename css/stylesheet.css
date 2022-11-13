@@ -2,6 +2,7 @@
     --sidebar-background: #F9F3EC;
     --foreground: #334D4D;
     --background: #F3E3D8;
+    --border-color: #5394A0;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
     font-family: Raleway;
 }
 
+/* Header styling */
 h1, h2, h3 {
     text-align: center;
     color: var(--foreground);
@@ -21,4 +23,10 @@ h1, h2, h3 {
     padding: 0;
 }
 
-
+/* Text area styling */
+#note-area {
+    width: 98%;
+    background-color: var(--sidebar-background);
+    border: 3px solid var(--border-color);
+    border-radius: 3px; 
+}
