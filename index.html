@@ -12,9 +12,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
-
-<body>
-    <header>
+<body class="grid-container">
+    <header class="header-style">
         <h1 class="heading-style">Take Better Notes</h1>
         <nav>
             <ul class="navbar-default">
@@ -23,31 +22,32 @@
             </ul>
         </nav>
     </header>
-    <section>
+    <section class="note-section">
         <section class="top-btn">
             <button class="btn-color btn-style">New Note</button>
             <button class="dark-btn btn-style">Dark Theme</button>
         </section>
-        <textarea name="note-taking" id="note-area" rows="10" placeholder="Start taking notes here!"></textarea>
+        <textarea name="note-taking" id="note-area" cols="30" rows="10"
+            placeholder="Start taking notes here!"></textarea>
         <section class="bot-btn">
             <button class="btn-color btn-style">Save</button>
             <button class="cancel-btn btn-style">Cancel</button>
         </section>
     </section>
-    <section>
+    <section class="my-notes">
         <h2 class="heading-style">My Notes</h2>
         <nav>
-            <ul class="my-notes">
+            <ul class="notes">
                 <li>note one</li>
                 <li>note two</li>
             </ul>
         </nav>
     </section>
-    <footer class="footer-style">
+    <footer class="footer-style footer-icon">
         <h3>Keep in Touch</h3>
-        <a href="https://ca.linkedin.com/"><img class="footer-icon" src="images/linkedin-icon.png"
+        <a href="https://ca.linkedin.com/"><img src="images/linkedin-icon.png"
                 alt="Linkedin" height="50" width="50"></a>
-        <a href="https://www.google.com/"><img class="footer-icon" src="images/internet-icon.png"
+        <a href="https://www.google.com/"><img src="images/internet-icon.png"
                 alt="Google Search Engine" height="50" width="50"></a>
     </footer>
 </body>

@@ -13,7 +13,7 @@ body {
 }
 
 /* Header styling */
-header {
+.header-style {
     border-bottom: 2px solid var(--foreground);
     margin-bottom: 2rem;
 }
@@ -32,12 +32,11 @@ header {
 
 /* Text area styling */
 #note-area {
-    min-width: 99%;
+    width: 99.5%;
     padding: 0;
     background-color: var(--sidebar-background);
     border: 3px solid var(--border-color);
     border-radius: 3px;
-    display: flex;
     margin: 1.5rem 0 1.5rem;
 }
 
@@ -73,17 +72,46 @@ header {
 }
 
 /* My notes styling */
-.my-notes {
+.notes {
     color: var(--foreground);
-    list-style: none;
-    display: flex;
-    padding: 0;
-    justify-content: space-evenly;
-    margin-bottom: 5rem;
-    flex-wrap: wrap;
+    list-style: square;
 }
 
 /* Footer Styling */
 .footer-icon {
     mix-blend-mode: multiply;
+}
+
+@media screen and (min-width: 600px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 17% 1fr 1fr;
+    }
+
+    /* Desktop header style */
+    .header-style {
+        grid-column: 2/3;
+        border: 0;
+    }
+
+    .navbar-default {
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+    /* Desktop main note section / footer style */
+    .note-section, .footer-style {
+        grid-column: 2/3;
+    }
+
+    /* Desktop my notes styling */
+    .my-notes {
+        background-color: var(--sidebar-background);
+        height: 100%;
+        width: 20%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-left: -5px;
+    }
 }
