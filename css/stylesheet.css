@@ -73,8 +73,12 @@ body {
 
 /* My notes styling */
 .notes {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
     color: var(--foreground);
-    list-style: square;
+    list-style: none;
+    padding-bottom: 5%;
 }
 
 /* Footer Styling */
@@ -113,5 +117,11 @@ body {
         top: 0;
         left: 0;
         margin-left: -5px;
+    }
+
+    .notes {
+        flex-direction: column;
+        padding-left: 35px;
+        list-style: square;
     }
 }
