@@ -13,12 +13,12 @@ body {
 }
 
 /* Header styling */
-.header-style {
+.note-header {
     border-bottom: 2px solid var(--foreground);
     margin-bottom: 2rem;
 }
 
-.heading-style, .footer-style {
+.note-heading, .note-footer {
     text-align: center;
     color: var(--foreground);
 }
@@ -31,7 +31,7 @@ body {
 }
 
 /* Text area styling */
-#note-section-input {
+#note-input {
     width: 100%;
     background-color: var(--sidebar-background);
     border-radius: 3px;
@@ -79,7 +79,7 @@ body {
     padding: 0;
     color: var(--foreground);
     list-style: none;
-    padding-bottom: 5%;
+    padding-bottom: 15%;
 }
 
 /* Footer Styling */
@@ -87,6 +87,7 @@ body {
     mix-blend-mode: multiply;
 }
 
+/* Starting desktop styling */
 @media screen and (min-width: 600px){
     .grid-container {
         display: grid;
@@ -94,19 +95,15 @@ body {
         grid-template-rows: 17% 1fr 1fr;
     }
 
-    /* Desktop header style */
-    .header-style {
-        grid-column: 2/3;
-        border: 0;
-    }
-
+    /* Desktop header style, main note section and footer style */
     .navbar-default {
         justify-content: flex-end;
         gap: 1rem;
     }
-    /* Desktop main note section / footer style */
-    .note-section, .footer-style {
+
+    .grid-style {
         grid-column: 2/3;
+        border: 0;
     }
 
     /* Desktop my notes styling */
