@@ -34,11 +34,12 @@ body {
 #note-input {
     width: 100%;
     background-color: var(--sidebar-background);
-    border-radius: 3px;
+    border-radius: 2px;
     padding: 5px;
     margin: 1.5rem 0 1.5rem;
     resize: none;
     box-sizing: border-box;
+    border: 2px solid cornflowerblue;
 }
 
 /* Button styling */
