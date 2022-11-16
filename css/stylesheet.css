@@ -88,6 +88,7 @@ body {
     color: var(--foreground);
     text-decoration: none;
 }
+
 /* Footer Styling */
 .footer-icon {
     mix-blend-mode: multiply;
