@@ -17,7 +17,8 @@ body {
     margin-bottom: 2rem;
 }
 
-.note-heading, .note-footer {
+.note-heading,
+.note-footer {
     text-align: center;
     color: var(--foreground);
 }
@@ -64,7 +65,7 @@ body {
 
 .top-btn {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .bot-btn {
@@ -76,10 +77,11 @@ body {
 /* My notes styling */
 .my-notes-list {
     display: flex;
-    justify-content: space-evenly;
-    padding: 0;
     color: var(--foreground);
-    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    list-style-type: none;
     padding-bottom: 15%;
 }
 
@@ -95,7 +97,7 @@ body {
 }
 
 /* Starting desktop styling */
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) {
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 4fr;
@@ -125,8 +127,8 @@ body {
     }
 
     .my-notes-list {
-        flex-direction: column;
-        padding-left: 45px;
+        align-items: flex-start;
         list-style: square;
+        padding-left: 45px;
     }
 }
