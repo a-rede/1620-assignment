@@ -9,6 +9,7 @@
 body {
     background-color: var(--background);
     font-family: "Slabo 27px";
+    height: 100vh;
 }
 
 /* Header styling */
@@ -82,7 +83,7 @@ body {
     align-items: center;
     padding: 0;
     list-style-type: none;
-    padding-bottom: 15%;
+    padding-bottom: 2%;
 }
 
 /* Link styles for my notes and navbar */
