@@ -1,31 +1,31 @@
 :root {
     --sidebar-background: #F9F3EC;
-    --foreground: #334D4D;
+    --general-btn-color: #334D4D;
     --background: #F3E3D8;
     --dark-btn-color: #2D3034;
     --save-btn-color: #8C1212;
+    --text-color: #293D3D;
 }
 
 body {
     background-color: var(--background);
     font-family: "Slabo 27px";
-    height: 100vh;
 }
 
 /* Header styling */
 .note-header {
-    border-bottom: 2px solid var(--foreground);
+    border-bottom: 2px solid var(--text-color);
     margin-bottom: 2rem;
 }
 
 .note-heading,
 .note-footer {
     text-align: center;
-    color: var(--foreground);
+    color: var(--text-color);
 }
 
 .navbar-default {
-    color: var(--foreground);
+    color: var(--text-color);
     display: flex;
     list-style-type: none;
     justify-content: space-evenly;
@@ -46,7 +46,7 @@ body {
 
 /* Button styling */
 .btn-color {
-    background-color: var(--foreground);
+    background-color: var(--general-btn-color);
 }
 
 .dark-btn {
@@ -79,7 +79,7 @@ body {
 /* My notes styling */
 .my-notes-list {
     display: flex;
-    color: var(--foreground);
+    color: var(--text-color);
     flex-direction: column;
     align-items: center;
     padding: 0;
@@ -89,13 +89,8 @@ body {
 
 /* Link styles for my notes and navbar */
 .link-style a {
-    color: var(--foreground);
+    color: var(--text-color);
     text-decoration: none;
-}
-
-/* Footer Styling */
-.footer-icon {
-    mix-blend-mode: multiply;
 }
 
 /* Starting desktop styling */
