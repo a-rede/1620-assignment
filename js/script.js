@@ -52,25 +52,17 @@ let notesArray = [
 ];
 
 const saveButton = document.querySelector(".bot-btn > button");
-let noteEntry = document.createElement('li');
+saveButton.addEventListener("click", saveNotes);
 
-saveButton.addEventListener("click", () => {
-    let title = titleEntry();
-    let notes = addNote(title);
-    console.log(notes);
-});
-
-function titleEntry() {
+function saveNotes() {
     let noteTitle = prompt("Enter note title:");
-};
-
-function addNote(noteTitle) {
-    let note = document.querySelector("#note-input").value;
+    let noteBody = document.querySelector("#note-input").value;
     notesArray.push({
         title: noteTitle,
-        body: note,
+        body: noteBody,
     });
 };
+
 
 // saveButton.addEventListener("click", () => {
 //     let noteTitle = prompt("Enter note title:");
