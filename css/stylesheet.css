@@ -1,19 +1,19 @@
 :root {
-    --text-color: #293D3D;
-    --sidebar-background: #F9F3EC;
-    --background: #F3E3D8;
-    --general-btn-color: #334D4D;
-    --dark-btn-color: #464B53;
+    --text-color: #293d3d;
+    --sidebar-background: #f9f3ec;
+    --background: #f3e3d8;
+    --general-btn-color: #334d4d;
+    --dark-btn-color: #464b53;
     --save-btn-color: #951313;
 }
 
 /* javascript dark mode styling */
 .dark-mode {
-    --text-color: #FFFFFF;
+    --text-color: #ffffff;
     --sidebar-background: #323232;
     --background: #292929;
     --general-btn-color: #182525;
-    --dark-btn-color: #090A0B;
+    --dark-btn-color: #090a0b;
     --save-btn-color: #5a0b0b;
 }
 
