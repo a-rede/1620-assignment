@@ -58,6 +58,7 @@ body {
 #note-input {
     width: 100%;
     background-color: var(--sidebar-background);
+    color: var(--text-color);
     border-radius: 2px;
     padding: 5px;
     margin: 1.5rem 0 1.5rem;

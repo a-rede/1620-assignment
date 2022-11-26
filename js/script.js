@@ -21,8 +21,24 @@ cancelButton.addEventListener('click', () => {
 
 //* New Note button function
 const newNoteButton = document.querySelector('.top-btn > button');
+const textArea = document.querySelector('#note-input');
+const botButtons = document.querySelector('.bot-btn');
 
-newNoteButton.addEventListener('click', () => {
-    document.querySelector('.bot-btn').classList.remove('hidden');
-    document.querySelector('#note-input').classList.remove('hidden');
-});
+newNoteButton.addEventListener('click', newNoteHandler);
+
+function revealNoteArea() {
+    botButtons.classList.remove('hidden');
+    textArea.classList.remove('hidden');
+};
+
+function resetTextArea() {
+    textArea.value = '';
+};
+
+function newNoteHandler() {
+    if (textArea.className.includes('hidden')) {
+        revealNoteArea();
+    } else {
+        resetTextArea();
+    };
+};
