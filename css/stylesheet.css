@@ -120,7 +120,7 @@ body {
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 4fr;
-        grid-template-rows: 13% 1fr 1fr;
+        grid-template-rows: 16% 1fr 1fr;
     }
 
     /* Desktop header style, main note section and footer style */
