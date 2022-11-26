@@ -10,3 +10,10 @@ darkButton.addEventListener('click', () => {
     }
 });
 
+//* Cancel button function
+const cancelButton = document.querySelector('.cancel-btn');
+
+cancelButton.addEventListener('click', () => {
+    document.querySelector('.bot-btn').classList.add('hidden');
+    document.querySelector('#note-input').classList.add('hidden');
+});

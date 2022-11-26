@@ -17,6 +17,12 @@
     --save-btn-color: #5a0b0b;
 }
 
+/* javascript view mode styling */
+.hidden {
+    /* Using !important to override default display value */
+    display: none !important;
+}
+
 body {
     background-color: var(--background);
     font-family: "Slabo 27px";
