@@ -1,10 +1,20 @@
 :root {
-    --sidebar-background: #F9F3EC;
-    --general-btn-color: #334D4D;
-    --background: #F3E3D8;
-    --dark-btn-color: #2D3034;
-    --save-btn-color: #8C1212;
     --text-color: #293D3D;
+    --sidebar-background: #F9F3EC;
+    --background: #F3E3D8;
+    --general-btn-color: #334D4D;
+    --dark-btn-color: #464B53;
+    --save-btn-color: #951313;
+}
+
+/* javascript dark mode styling */
+.dark-mode {
+    --text-color: #FFFFFF;
+    --sidebar-background: #323232;
+    --background: #292929;
+    --general-btn-color: #182525;
+    --dark-btn-color: #090A0B;
+    --save-btn-color: #5a0b0b;
 }
 
 body {

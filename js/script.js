@@ -1,3 +1,4 @@
+//* Dark button function
 const darkButton = document.querySelector('.dark-btn');
 
 darkButton.addEventListener('click', () => {
@@ -8,3 +9,4 @@ darkButton.addEventListener('click', () => {
         darkButton.textContent = 'Dark Theme';
     }
 });
+
