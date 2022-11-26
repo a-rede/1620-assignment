@@ -18,6 +18,11 @@
 }
 
 /* javascript view mode styling */
+.visible {
+    /* Using !important to override default display value */
+    display: block !important;
+}
+
 .hidden {
     /* Using !important to override default display value */
     display: none !important;
