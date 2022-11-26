@@ -37,7 +37,7 @@ body {
 /* Header styling */
 .note-header {
     border-bottom: 2px solid var(--text-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .note-heading,
@@ -120,7 +120,7 @@ body {
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 4fr;
-        grid-template-rows: 17% 1fr 1fr;
+        grid-template-rows: 13% 1fr 1fr;
     }
 
     /* Desktop header style, main note section and footer style */
