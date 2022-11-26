@@ -31,15 +31,11 @@ function revealNoteArea() {
     textArea.classList.remove("hidden");
 }
 
-function resetTextArea() {
-    textArea.value = "";
-}
-
 function newNoteHandler() {
     if (textArea.className.includes("hidden")) {
         revealNoteArea();
     } else {
-        resetTextArea();
+        textArea.value = "";
     }
 }
 
