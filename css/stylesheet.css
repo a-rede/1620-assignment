@@ -31,7 +31,7 @@
 body {
     background-color: var(--background);
     font-family: "Slabo 27px";
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
 }
 
