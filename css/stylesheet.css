@@ -1,29 +1,54 @@
 :root {
-    --sidebar-background: #F9F3EC;
-    --foreground: #334D4D;
-    --background: #F3E3D8;
-    --dark-btn-color: #2D3034;
-    --save-btn-color: #8C1212;
+    --text-color: #334d4d;
+    --text-area-color: #000000;
+    --sidebar-background: #f9f3ec;
+    --background: #f3e3d8;
+    --general-btn-color: #334d4d;
+    --dark-btn-color: #464b53;
+    --save-btn-color: #951313;
+}
+
+/* javascript dark mode styling */
+.dark-mode {
+    --text-color: #ffffffd8;
+    --text-area-color: #FFFFFF;
+    --sidebar-background: #323232;
+    --background: #292929;
+    --dark-btn-color: #111111;
+}
+
+/* javascript note view styling */
+.visible {
+    /* Using !important to override default display value */
+    display: block !important;
+}
+
+.hidden {
+    /* Using !important to override default display value */
+    display: none !important;
 }
 
 body {
     background-color: var(--background);
     font-family: "Slabo 27px";
+    height: 100vh;
+    overflow: hidden;
 }
 
 /* Header styling */
 .note-header {
-    border-bottom: 2px solid var(--foreground);
-    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--text-color);
+    margin-bottom: 1.5rem;
 }
 
-.note-heading, .note-footer {
+.note-heading,
+.note-footer {
     text-align: center;
-    color: var(--foreground);
+    color: var(--text-color);
 }
 
 .navbar-default {
-    color: var(--foreground);
+    color: var(--text-color);
     display: flex;
     list-style-type: none;
     justify-content: space-evenly;
@@ -34,6 +59,7 @@ body {
 #note-input {
     width: 100%;
     background-color: var(--sidebar-background);
+    color: var(--text-area-color);
     border-radius: 2px;
     padding: 5px;
     margin: 1.5rem 0 1.5rem;
@@ -44,7 +70,7 @@ body {
 
 /* Button styling */
 .btn-color {
-    background-color: var(--foreground);
+    background-color: var(--general-btn-color);
 }
 
 .dark-btn {
@@ -60,11 +86,12 @@ body {
     border: 0;
     padding: 1rem;
     border-radius: 13px;
+    cursor: pointer;
 }
 
 .top-btn {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .bot-btn {
@@ -76,30 +103,30 @@ body {
 /* My notes styling */
 .my-notes-list {
     display: flex;
-    justify-content: space-evenly;
+    color: var(--text-color);
+    flex-direction: column;
+    align-items: center;
     padding: 0;
-    color: var(--foreground);
-    list-style: none;
-    padding-bottom: 15%;
+    list-style-type: none;
+    padding-bottom: 2%;
 }
 
 /* Link styles for my notes and navbar */
 .link-style a {
-    color: var(--foreground);
+    color: var(--text-color);
     text-decoration: none;
 }
 
-/* Footer Styling */
-.footer-icon {
-    mix-blend-mode: multiply;
+.my-notes-list li {
+    cursor: pointer;
 }
 
 /* Starting desktop styling */
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) {
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 4fr;
-        grid-template-rows: 17% 1fr 1fr;
+        grid-template-rows: 0.1fr 1fr 0.3fr;
     }
 
     /* Desktop header style, main note section and footer style */
@@ -125,8 +152,8 @@ body {
     }
 
     .my-notes-list {
-        flex-direction: column;
-        padding-left: 45px;
+        align-items: flex-start;
         list-style: square;
+        padding-left: 45px;
     }
 }
