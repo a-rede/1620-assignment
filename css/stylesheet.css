@@ -10,7 +10,7 @@
 
 /* javascript dark mode styling */
 .dark-mode {
-    --text-color: #fffffff5;
+    --text-color: #ffffffd8;
     --text-area-color: #FFFFFF;
     --sidebar-background: #323232;
     --background: #292929;
@@ -31,7 +31,8 @@
 body {
     background-color: var(--background);
     font-family: "Slabo 27px";
-    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 /* Header styling */
@@ -125,7 +126,7 @@ body {
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 4fr;
-        grid-template-rows: 16% 1fr 1fr;
+        grid-template-rows: 0.1fr 1fr 1fr;
     }
 
     /* Desktop header style, main note section and footer style */
