@@ -55,13 +55,17 @@ function newNoteHandler() {
 
 //* Adding functionality to Save button
 function saveNotes() {
-    let noteTitle = prompt("Enter note title:");
+    let noteTitle = prompt("Enter a note title:");
     let noteBody = document.querySelector("#note-input").value;
-    notesArray.push({
-        title: noteTitle,
-        body: noteBody
-    });
-    addNote();
+    if (noteTitle !== '' && noteTitle.trim().length !== 0) {
+        notesArray.push({
+            title: noteTitle,
+            body: noteBody
+        });
+        addNote();
+    } else {
+        alert("You must enter an appropriate title for the current note.");
+    }
 }
 
 function addNote() {
