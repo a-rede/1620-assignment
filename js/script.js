@@ -25,6 +25,7 @@ function darkThemeToggler() {
     changeBtnText();
 }
 
+
 function changeBtnText() {
     if (darkButton.textContent === "Dark Theme") {
         darkButton.textContent = "Light Theme";
@@ -58,11 +59,8 @@ function newNoteHandler() {
 
 //* Adding functionality to Save button
 function saveNotes() {
-    // Retrieving the note title and content
     let noteTitle = prompt("Enter note title:");
     let noteBody = document.querySelector("#note-input").value;
-
-    // Saves the note information in an array of objects
     notesArray.push({
         title: noteTitle,
         body: noteBody
@@ -81,6 +79,7 @@ function addNote() {
 
 //* Adding functionality to My Notes
 noteItem.addEventListener("click", (event) => {
+    const textArea = document.querySelector("#note-input");
     for (let note of notesArray) {
         if (note.title === event.target.textContent) {
             textArea.value = note.body
