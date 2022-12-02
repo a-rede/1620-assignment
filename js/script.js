@@ -15,10 +15,6 @@ let notesArray = [
     }
 ];
 
-newNoteButton.addEventListener("click", newNoteHandler);
-darkButton.addEventListener("click", darkThemeToggler);
-saveButton.addEventListener("click", saveNotes);
-
 //* Adding functionality to Dark Mode button
 function darkThemeToggler() {
     document.body.classList.toggle("dark-mode");
@@ -86,3 +82,7 @@ noteItem.addEventListener("click", (event) => {
         };
     };
 })
+
+newNoteButton.addEventListener("click", newNoteHandler);
+darkButton.addEventListener("click", darkThemeToggler);
+saveButton.addEventListener("click", saveNotes);

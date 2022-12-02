@@ -1,5 +1,6 @@
 :root {
     --text-color: #334d4d;
+    --text-area-color: #000000;
     --sidebar-background: #f9f3ec;
     --background: #f3e3d8;
     --general-btn-color: #334d4d;
@@ -9,7 +10,8 @@
 
 /* javascript dark mode styling */
 .dark-mode {
-    --text-color: #dfdbdbf5;
+    --text-color: #fffffff5;
+    --text-area-color: #FFFFFF;
     --sidebar-background: #323232;
     --background: #292929;
     --dark-btn-color: #111111;
@@ -56,7 +58,7 @@ body {
 #note-input {
     width: 100%;
     background-color: var(--sidebar-background);
-    color: var(--text-color);
+    color: var(--text-area-color);
     border-radius: 2px;
     padding: 5px;
     margin: 1.5rem 0 1.5rem;
