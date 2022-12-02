@@ -1,4 +1,4 @@
-//* Dark button function
+//* Adding functionality to Dark button
 const darkButton = document.querySelector(".dark-btn");
 darkButton.addEventListener("click", darkThemeToggler);
 
@@ -15,7 +15,7 @@ function changeBtnText() {
     }
 }
 
-//* Cancel button function
+//* Adding functionality to Cancel button
 const cancelButton = document.querySelector(".cancel-btn");
 
 cancelButton.addEventListener("click", () => {
@@ -23,7 +23,7 @@ cancelButton.addEventListener("click", () => {
     document.querySelector("#note-input").classList.add("hidden");
 });
 
-//* New Note button function
+//* Adding functionality to New Note button
 const newNoteButton = document.querySelector(".top-btn > button");
 const textArea = document.querySelector("#note-input");
 const botButtons = document.querySelector(".bot-btn");
@@ -51,16 +51,17 @@ let notesArray = [
     },
 ];
 
-//* Save button function
+//* Adding functionality to Save button
 const saveButton = document.querySelector(".bot-btn > button");
 const notesList = document.querySelector('.my-notes-list');
 saveButton.addEventListener("click", saveNotes);
 
 function saveNotes() {
+    // Retrieving the note title and content
     let noteTitle = prompt("Enter note title:");
     let noteBody = document.querySelector("#note-input").value;
 
-    // Saves note information in an array of objects
+    // Saves the note information in an array of objects
     notesArray.push({
         title: noteTitle,
         body: noteBody,
@@ -75,3 +76,17 @@ function updateMyNotes() {
     }
     notesList.append(listItem);
 }
+
+//* Adding functionality to My Notes
+const clickListItem = document.querySelectorAll('.my-notes-list li');
+const noteTextArea = document.querySelectorAll('#note-input');
+
+//adds an event listener to li elements that exists
+for (let i = 0; i < clickListItem.length; i++) {
+    const listItem = clickListItem[i];
+    listItem.addEventListener('click', loadNotes);
+};
+
+
+// Iterate through notesArray and pull the notes body
+// display notes body when the specific note is clicked

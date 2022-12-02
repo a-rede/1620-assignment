@@ -1,5 +1,5 @@
 :root {
-    --text-color: #293d3d;
+    --text-color: #334d4d;
     --sidebar-background: #f9f3ec;
     --background: #f3e3d8;
     --general-btn-color: #334d4d;
@@ -9,15 +9,13 @@
 
 /* javascript dark mode styling */
 .dark-mode {
-    --text-color: #ffffff;
+    --text-color: #dfdbdbf5;
     --sidebar-background: #323232;
     --background: #292929;
-    --general-btn-color: #182525;
-    --dark-btn-color: #090a0b;
-    --save-btn-color: #5a0b0b;
+    --dark-btn-color: #111111;
 }
 
-/* javascript view mode styling */
+/* javascript note view styling */
 .visible {
     /* Using !important to override default display value */
     display: block !important;
