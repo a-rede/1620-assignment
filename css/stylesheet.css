@@ -114,6 +114,10 @@ body {
     text-decoration: none;
 }
 
+.my-notes-list li {
+    cursor: pointer;
+}
+
 /* Starting desktop styling */
 @media screen and (min-width: 600px) {
     .grid-container {
