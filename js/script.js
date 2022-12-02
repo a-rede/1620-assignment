@@ -1,7 +1,25 @@
-//* Adding functionality to Dark button
 const darkButton = document.querySelector(".dark-btn");
-darkButton.addEventListener("click", darkThemeToggler);
+const cancelButton = document.querySelector(".cancel-btn");
+const saveButton = document.querySelector(".bot-btn > button");
+const noteItem = document.querySelector(".my-notes-list")
+const newNoteButton = document.querySelector(".top-btn > button");
+let notesArray = [
+    //* New notes array (will store newly created notes)
+    {
+        title: "note one",
+        body: "this is my first note"
+    },
+    {
+        title: "note two",
+        body: "this is my second note"
+    }
+];
 
+newNoteButton.addEventListener("click", newNoteHandler);
+darkButton.addEventListener("click", darkThemeToggler);
+saveButton.addEventListener("click", saveNotes);
+
+//* Adding functionality to Dark Mode button
 function darkThemeToggler() {
     document.body.classList.toggle("dark-mode");
     changeBtnText();
@@ -16,26 +34,21 @@ function changeBtnText() {
 }
 
 //* Adding functionality to Cancel button
-const cancelButton = document.querySelector(".cancel-btn");
-
 cancelButton.addEventListener("click", () => {
     document.querySelector(".bot-btn").classList.add("hidden");
     document.querySelector("#note-input").classList.add("hidden");
 });
 
 //* Adding functionality to New Note button
-const newNoteButton = document.querySelector(".top-btn > button");
-const textArea = document.querySelector("#note-input");
-const botButtons = document.querySelector(".bot-btn");
-
-newNoteButton.addEventListener("click", newNoteHandler);
-
 function revealNoteArea() {
+    const textArea = document.querySelector("#note-input");
+    const botButtons = document.querySelector(".bot-btn");
     botButtons.classList.remove("hidden");
     textArea.classList.remove("hidden");
 }
 
 function newNoteHandler() {
+    const textArea = document.querySelector("#note-input");
     if (textArea.className.includes("hidden")) {
         revealNoteArea();
     } else {
@@ -43,19 +56,7 @@ function newNoteHandler() {
     }
 }
 
-//* New notes array (stores newly created notes)
-let notesArray = [
-    {
-        title: "note one",
-        body: "this is my first note",
-    },
-];
-
 //* Adding functionality to Save button
-const saveButton = document.querySelector(".bot-btn > button");
-const notesList = document.querySelector('.my-notes-list');
-saveButton.addEventListener("click", saveNotes);
-
 function saveNotes() {
     // Retrieving the note title and content
     let noteTitle = prompt("Enter note title:");
@@ -64,29 +65,25 @@ function saveNotes() {
     // Saves the note information in an array of objects
     notesArray.push({
         title: noteTitle,
-        body: noteBody,
+        body: noteBody
     });
-    updateMyNotes();
-};
-
-function updateMyNotes() {
-    const listItem = document.createElement('li');
-    for (let note of notesArray) {
-        listItem.textContent = `${note.title}`;
-    }
-    notesList.append(listItem);
+    addNote();
 }
 
-//* Adding functionality to My Notes
-const clickListItem = document.querySelectorAll('.my-notes-list li');
-const noteTextArea = document.querySelectorAll('#note-input');
-
-//adds an event listener to li elements that exists
-for (let i = 0; i < clickListItem.length; i++) {
-    const listItem = clickListItem[i];
-    listItem.addEventListener('click', loadNotes);
+function addNote() {
+    const notesList = document.querySelector(".my-notes-list");
+    const listItem = document.createElement("li");
+    for (let note of notesArray) {
+        listItem.textContent = `${note.title}`
+    };
+    notesList.append(listItem)
 };
 
-
-// Iterate through notesArray and pull the notes body
-// display notes body when the specific note is clicked
+//* Adding functionality to My Notes
+noteItem.addEventListener("click", (event) => {
+    for (let note of notesArray) {
+        if (note.title === event.target.textContent) {
+            textArea.value = note.body
+        };
+    };
+})
