@@ -73,6 +73,7 @@ function addNote() {
     const listItem = document.createElement("li");
     for (let note of notesArray) {
         listItem.textContent = `${note.title}`
+        break
     };
     notesList.append(listItem)
 };

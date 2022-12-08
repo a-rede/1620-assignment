@@ -17,17 +17,6 @@
     --dark-btn-color: #111111;
 }
 
-/* javascript note view styling */
-.visible {
-    /* Using !important to override default display value */
-    display: block !important;
-}
-
-.hidden {
-    /* Using !important to override default display value */
-    display: none !important;
-}
-
 body {
     background-color: var(--background);
     font-family: "Slabo 27px";
@@ -99,6 +88,18 @@ body {
     justify-content: right;
     gap: 1rem;
 }
+
+/* javascript note view styling */
+.visible {
+    /* Using !important to override default display value */
+    display: block;
+}
+
+.hidden {
+    /* Using !important to override default display value */
+    display: none;
+}
+
 
 /* My notes styling */
 .my-notes-list {
